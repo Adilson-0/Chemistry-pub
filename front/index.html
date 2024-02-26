@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry</title>
+    <link rel="stylesheet" href="style_main.css">
+    <link rel="shortcut icon" href="images/frasco-de-quimica.png" type="image/x-icon">
+</head>
+<body>
+    <!--PRIMEIRA DIV PRINCIPAL-->
+    <div id="main">
+        <div id="imagem">
+            <img id="image-main" src="images/atomo.png" alt="quimica">
+        </div>
+        <div id="text">
+            <h1>chemistry</h1>
+            <p id="p-main">pesquise fórmulas de moléculas e reações orgânicas rapidamente!</p>
+            <br>
+        </div>
+        <p id="text_init">Esta aplicação é um projeto interdisciplinar entre química e informática e tem por objetivo ajudar no aprendizado de química orgânica no quesito das classificações das cadeias orgânicas e na representação destas moléculas em suas fórmulas estruturais e bastão.</p>
+    </div>
+
+    <!-- DIV DA PESQUSA DE MOLÉCULAS -->
+    <div id="pesq_mol">
+        <h2>pesquisa de molécula</h2>
+
+        <p style="font-size: 100%; margin-bottom: 2%;">Digite o nome da molécula para visualizar sua fórmula bastão, fórmula estrutural e outras informações relevantes.</p>
+
+        <form id="pesq_form">
+            <label style="color: #131b14; font-size: 120%;" for="name">
+                nome da molécula:
+            </label>
+            <input type="text" name="name" id="inp_comp"><br>
+            <button type="button" id="button_mol" class="button_pesq">INICIAR PESQUISA</button>
+        </form><br>
+
+        <div id="imgsf" style="display: grid; justify-content: center; align-items: center;">
+            <div style="display: flex;">
+                <div id="fb_container">
+                    <p class="pf">Fórmula Bastão</p>
+                    <div id="formulaB"></div>
+                </div>
+                <div id="fe_container">
+                    <p class="pf">Fórmula Estrutural</p>
+                    <div id="formulaE"></div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: grid; justify-items: center;">
+            <div id="infos">
+                <h3>informações sobre a substância</h3>
+                <div id="inf_resp" style="text-align: left;"></div>
+            </div>
+        </div>
+    </div><br>
+
+    <hr style="border-color: #49a768; width: 85%; margin-left: auto; margin-right: auto;">
+
+    <!-- DIV DA PESQUISA DE REAÇÕES QUÍMICAS -->
+    <div id="pesq_reac">
+        <h2>pesquisa de reação</h2>
+
+        <p style="font-size: 100%; margin-bottom: 2%; margin-left: 20%; margin-right: 20%;">Digite o nome dos reagentes, catalizadores/solventes e produtos da reação que você deseja pesquisar. Você pode adicionar mais de um de cada item, ao clicar no botão de adicionar a caixa de texto será limpa e permitirá uma nova adição.</p>
+
+        <form id="pesq_form">
+            <div id="div-inps" style="display: flex; justify-content: center;">
+                <div style="margin-right: 15px;">
+                    <label style="color: #131b14; font-size: 120%;" for="inp_reagente">
+                        Reagente
+                    </label>
+                    <br>
+                    <input style="text-align: center;" type="text" name="inp_reagente" id="inp_reagente"><br>
+                    <button type="button" class="button_add" id="button_reac_reag">adicionar</button>
+                    <div id="reags"></div>
+                </div>
+                <div style="margin-right: 15px;">
+                    <label style="color: #131b14; font-size: 120%;" for="inp_catalizador">
+                        Catalisador/Solvente
+                    </label>
+                    <br>
+                    <input style="text-align: center;" type="text" name="inp_catalizador" id="inp_catalizador"><br>
+                    <button type="button" class="button_add" id="button_reac_catal">adicionar</button>
+                    <div id="catals"></div>
+                </div>
+                <div>
+                    <label style="color: #131b14; font-size: 120%;" for="inp_produto">
+                        Produto
+                    </label>
+                    <br>
+                    <input style="text-align: center;" type="text" name="inp_produto" id="inp_produto"><br>
+                    <button type="button" class="button_add" id="button_reac_prod">adicionar</button>
+                    <div id="prods"></div>
+                </div>
+            </div>
+            <div style="margin-top: 2%;">
+                <button type="button" id="button_reac" class="button_pesq">INICIAR PESQUISA</button>
+                <button type="button" id="button_cancel_reac">CANCELAR PESQUISA</button>
+            </div>
+        </form><br>
+
+        <div id="imgsf" style="display: grid; justify-content: center; align-items: center;">
+            <div>
+                <div id="reac_container">
+                    <p class="pf">Reação Química</p>
+                    <div id="reac"></div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: grid; justify-items: center;">
+            <div id="infos">
+                <h3>informações sobre a reação</h3>
+                <div id="inf_resp_reac" style="text-align: left;"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p style="font-weight: bold;">chemistry</p><br>
+        <p>Site desenvolvido por <a href="#">Adilson Fernandes</a> e Gleryston Lucas</p>
+    </footer>
+</body>
+<script src="app_mol.js"></script>
+<script src="app_reac.js"></script>
+</html>

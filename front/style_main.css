@@ -1,0 +1,211 @@
+/*----configurações gerais-----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*primeira div principal*/
+#main{
+    text-align: center;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(54, 189, 76), rgb(115, 206, 135), rgb(115, 206, 135), rgb(54, 189, 76));
+    box-shadow: 0px 10px 15px rgb(76, 150, 76);
+}
+
+/*config. da imagem da primeira div principal*/
+#image-main{
+    width: 17%;
+    height: 17%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+}
+
+/*margem superior da área de exibição das fórmulas*/
+#imgsf{
+    margin-top: 2%;
+}
+
+/*tamanho das imagens das fórmulas bastão e estrutural*/
+#img_molB, #img_molE{
+    width: 67%;
+    height: 67%;
+}
+
+#img_molE{
+    width: 75%;
+    height: 75%;
+}
+
+/*tamanho da imagem da reação orgânica*/
+#img_reac{
+    width: 100%;
+    height: 100%;
+}
+
+/*config. de textos que estão da área de exibição de resultados*/
+.pf{
+    font-size: 120%;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+/*config. das divs que vão conter as imagens das fórmulas*/
+#fb_container, #fe_container{
+    border: solid 3px #49a768;
+    width: 500px;
+    height: 400px;
+}
+
+/*config. da div que vai conter a imagem da reação*/
+#reac_container{
+    border: solid 3px #49a768;
+    border-radius: 10px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    width: 1000px;
+    height: 500px;
+}
+
+/*config. das bordas das divs que vão conter as imagens das fórmulas*/
+#fb_container{
+    border-top-left-radius: 10px;
+    border-right: 1px;
+}
+
+#fe_container{
+    border-top-right-radius: 10px;
+}
+
+/*config individual dos textos do main e da div que contém eles*/
+h1{
+    color: white;
+    margin-top: 3%;
+    font-size: 300%;
+    font-weight: bolder;
+    border: solid 3px #041a07;
+    border-radius: 15px;
+    background-color: #041a07;
+}
+h2{
+    color: #131b14;
+    margin-top: 4%;
+    margin-bottom: 0.5%;
+}
+#p-main{
+    color: #131b14;
+    font-size: 200%;
+    font-weight: bold;
+}
+#text{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+#text_init{
+    text-align: center;
+    font-size: 130%;
+    color: #131b14;
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+/*alinhamento do texto que será inserido pelo usuário*/
+#pesq_mol, #pesq_reac{
+    text-align: center;
+}
+
+/*config. da aparência das caixas de texto*/
+input{
+    padding: 0.3%;
+    border: solid 2px #49a768;
+    border-radius: 5px;
+    color: #131b14;
+    font-size: 120%;
+}
+
+/*confid. dos botões de pesquisa*/
+.button_pesq{
+    margin-top: 3%;
+    border-radius: 10px;
+    padding: 0.5% 1%;
+    border: solid 4.5px #49a768;
+    background-image: linear-gradient(to right, #04a85c, #04a85c, #37f39b, #04a85c, #04a85c);
+    background-size: 500%;
+    color: white;
+    font-weight: bolder;
+    animation: button-anim 10s infinite alternate;
+}
+.button_pesq:hover{
+    background-image: linear-gradient(to right, white, white, white);
+    color: #041a07;
+}
+
+/*estilização dos botões de adição*/
+.button_add{
+    margin-top: 3%;
+    border-radius: 10px;
+    padding: 0.5% 1%;
+    border: solid 4.5px #49a768;
+    background-color: #04c269;
+    color: white;
+    font-weight: bolder;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+/*animação dos botões de adição*/
+.button_add:hover{
+    background-color: white;
+    color: #041a07;
+}
+
+#button_cancel_reac{
+    margin-top: 3%;
+    border-radius: 10px;
+    padding: 0.5% 0.5%;
+    border: solid 4.5px rgb(189, 45, 45);
+    background-color: rgb(255, 74, 74);
+    color: white;
+    font-weight: bolder;
+    font-size: 85%;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+#button_cancel_reac:hover{
+    background-color: white;
+    color: #041a07;
+}
+
+/*config. das divs que vão apresentar outras informações*/
+#infos{
+    display: grid;
+    justify-items: center;
+    border: solid 3px #49a768;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px;
+    width: 1000px;
+    padding: 0.5%;
+    margin-bottom: 4%;
+}
+
+/*pequeno rodapé do site*/
+footer{
+    padding: 3%;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(54, 189, 76), rgb(115, 206, 135), rgb(115, 206, 135), rgb(54, 189, 76));
+    box-shadow: 0px -7px 15px rgb(76, 150, 76);
+}
+
+/*pequena animação do botão de pesquisa*/
+@keyframes button-anim {
+    from{
+        background-position: 0%;
+    }
+    to{
+        background-position: 100%;
+    }
+}
